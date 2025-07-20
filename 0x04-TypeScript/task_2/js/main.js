@@ -47,3 +47,15 @@ function executeWork(employee) {
 executeWork(createEmployee(200)); // Output: Getting to work
 executeWork(createEmployee(1000)); // Output: Getting to director tasks
 executeWork(createEmployee('$500')); // Output: Getting to director tasks
+// Function to return subject being taught
+function teachClass(todayClass) {
+    if (todayClass === 'Math') {
+        return 'Teaching Math';
+    }
+    else if (todayClass === 'History') {
+        return 'Teaching History';
+    }
+}
+// Test
+console.log(teachClass('Math'));
+console.log(teachClass('History'));
