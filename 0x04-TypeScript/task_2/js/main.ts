@@ -73,4 +73,3 @@ function teachClass(todayClass: Subjects): string {
 // Test
 console.log(teachClass('Math'));
 console.log(teachClass('History'));
-
