@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./Teacher.ts" />
 var Subjects;
 (function (Subjects) {

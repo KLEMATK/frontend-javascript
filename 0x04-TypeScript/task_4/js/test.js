@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./subjects/Teacher.ts" />
 /// <reference path="./subjects/Subject.ts" />
 /// <reference path="./subjects/Cpp.ts" />

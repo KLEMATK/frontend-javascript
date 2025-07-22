@@ -1,3 +1,4 @@
+"use strict";
 /// <reference path="./Teacher.ts" />
 /// <reference path="./Subject.ts" />
 var __extends = (this && this.__extends) || (function () {

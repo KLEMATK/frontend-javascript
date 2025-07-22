@@ -8,5 +8,11 @@
     "forceConsistentCasingInFileNames": true,
     "outDir": "./dist"
   },
-  "include": ["./js/**/*"]
+  "include": [
+    "0x04-TypeScript/task_0/js/**/*",
+    "0x04-TypeScript/task_1/js/**/*",
+    "0x04-TypeScript/task_3/js/**/*",
+    "0x04-TypeScript/task_4/js/**/*"
+  ],
+  "exclude": ["node_modules"]
 }
