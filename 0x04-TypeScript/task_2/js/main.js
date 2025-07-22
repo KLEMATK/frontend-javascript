@@ -1,3 +1,5 @@
+// Interfaces for Director and Teacher
+// Director class implementing DirectorInterface
 var Director = /** @class */ (function () {
     function Director() {
     }
@@ -12,6 +14,7 @@ var Director = /** @class */ (function () {
     };
     return Director;
 }());
+// Teacher class implementing TeacherInterface
 var Teacher = /** @class */ (function () {
     function Teacher() {
     }
@@ -26,15 +29,18 @@ var Teacher = /** @class */ (function () {
     };
     return Teacher;
 }());
+// Factory function to create Director or Teacher based on salary
 function createEmployee(salary) {
     if (typeof salary === 'number' && salary < 500) {
         return new Teacher();
     }
     return new Director();
 }
+// Type guard to check if employee is Director
 function isDirector(employee) {
     return employee instanceof Director;
 }
+// Function to execute work depending on employee type
 function executeWork(employee) {
     if (isDirector(employee)) {
         console.log(employee.workDirectorTasks());
@@ -43,19 +49,18 @@ function executeWork(employee) {
         console.log(employee.workTeacherTasks());
     }
 }
-// Test cases
-executeWork(createEmployee(200)); // Output: Getting to work
-executeWork(createEmployee(1000)); // Output: Getting to director tasks
-executeWork(createEmployee('$500')); // Output: Getting to director tasks
-// Function to return subject being taught
+// Function returning string depending on subject
 function teachClass(todayClass) {
     if (todayClass === 'Math') {
         return 'Teaching Math';
     }
-    else if (todayClass === 'History') {
+    else {
         return 'Teaching History';
     }
 }
-// Test
-console.log(teachClass('Math'));
-console.log(teachClass('History'));
+// Example usage / tests:
+executeWork(createEmployee(200)); // Output: Getting to work
+executeWork(createEmployee(1000)); // Output: Getting to director tasks
+executeWork(createEmployee('$500')); // Output: Getting to director tasks
+console.log(teachClass('Math')); // Output: Teaching Math
+console.log(teachClass('History')); // Output: Teaching History
