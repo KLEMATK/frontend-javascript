@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "module": "none",
+    "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "node",
-    "outFile": "./js/bundle.js"
+    "outDir": "./dist"
   },
-  "include": ["js/**/*"]
+  "include": [
+    "./js/**/*.ts"
+  ]
 }
